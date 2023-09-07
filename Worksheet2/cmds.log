@@ -1,0 +1,17 @@
+    1  clear
+    2  grep -E "[0-9]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,United States," Global\ YouTube\ Statistics.csv > US.txt
+    3  grep -E "[0-9]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,Music," US.txt > US_ music.txt
+    4  ls
+    5  grep -E "[0-9]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,Music," US.txt > US_music.txt
+    6  ls
+    7  rm US_
+    8  ls
+    9  view US_music.txt
+   10  wc -l US_music.txt > counts.txt
+   11  wc -w US_music.txt >> counts.txt
+   12  view counts.txt
+   13  vi counts.txt
+   14  view counts.txt
+   15  grep -E "[0-9]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,United States+,[^,]+,Music," Global\ YouTube\ Statistics.csv | wc
+   16  view counts.txt
+   17  history > cmds.log
