@@ -1,5 +1,3 @@
-    1  pwd
-    2  ls
     3  grep -E "[0-9]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+(,United States,|,United Kingdom,|,India,)" Global\ YouTube\ Statistics.csv > US_UK_ID.csv
     6  sort -t ',' -k 16,16nr US_UK_ID.csv > sortedHighestIncome.csv
     9  grep "United States" sortedHighestIncome.csv | head -n 1 > ws3.txt
