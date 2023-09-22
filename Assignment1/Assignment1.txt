@@ -1,0 +1,61 @@
+1.
+mkdir Assignment1
+
+2.
+echo $SHELL
+/bin/bash
+
+2.1
+echo $HOME
+/mnt/scratch/FA23_CS131_Ashish/maximf23
+
+3.
+echo $UID
+1118
+groups
+maximf23 S77
+
+4.
+mkdir myDir
+chmod u-w myDir
+dr-xr-xr-x 2 maximf23 maximf23 4096 Sep 22 18:34 myDir
+ls
+ls -l
+touch a.txt
+touch: cannot touch 'a.txt': Permission denied
+
+Allowed to cd, can ls, can ls -l, can't create files in it.
+
+5.
+mkdir myDir2
+mkdir myDir3
+
+6.
+cd myDir2
+touch myFile.txt
+cd ..
+mv myDir2/myFile.txt myDir3
+cd myDir3
+ls
+myFile.txt
+
+6.1
+free -m
+              total        used        free      shared  buff/cache   available
+Mem:          71367       12155        1449        1244       57763       55298
+Swap:          4119        1052        3067
+
+Total amount of RAM is 71367 MiB
+
+9.
+cat /etc/os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+
+File: os-release
+
+10.
+ls -l /etc/os-release
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release
+
+rwx permission for all users.

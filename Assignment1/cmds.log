@@ -1,0 +1,41 @@
+1.
+mkdir Assignment1
+
+2.
+echo $SHELL
+
+2.1
+echo $HOME
+
+3.
+echo $UID
+groups
+
+4.
+mkdir myDir
+chmod u-w myDir
+ls
+ls -l
+cd myDir
+touch a.txt
+
+5.
+mkdir myDir2
+mkdir myDir3
+
+6.
+cd myDir2
+touch myFile.txt
+cd ..
+mv myDir2/myFile.txt myDir3
+cd myDir3
+ls
+
+6.1
+free -m
+
+9.
+cat /etc/os-release
+
+10.
+ls -l /etc/os-release
