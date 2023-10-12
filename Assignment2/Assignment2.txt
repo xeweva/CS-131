@@ -1,0 +1,96 @@
+1. Execute this command :
+
+find /etc -type f > one.txt 2> two.txt
+
+a. Explain in simple English what we are trying to do in this command.
+It finds and writes to one.txt all the files it can reach.
+It writes all the errors to the two.txt
+
+b. Using the cat command view one.txt and two.txt... In simple English sentences explain your observations about the content found in one.txt and two.txt
+It found some files and listed them in one.txt.
+two.txt contains multiple errors, permission denied
+
+------------
+2. Which [Month, Year] had the most YouTube channels created: March 2006
+
+As per the Dataset, Top 3 [Month, Year] with the most number of YouTube channels created were :
+2006,Mar, 15 channels
+2014,Jul, 13 channels
+2014,Aug, 12 channels
+
+The command(s) used to find it was this: _______________
+cut -d',' -f20,21 Global\ YouTube\ Statistics.csv > dates.txt
+sort -t',' -k20,20n -k21,21M dates.txt > sortedDates.txt
+uniq -c sortedDates.txt | sort -k1,1n | tail -3 > topDates.txt
+
+Explain the command along with the parameters used and the reason for using them.
+cut to get the dates fro the data
+sort to group the dates
+uniq to get the number of each date repetition
+sort again by repetitions
+tail to get 3 highest repetitions
+
+------------
+3. Write the command you would use to find all the processes owned by you. Paste the output of the same. 
+
+ps -u $USER
+
+    PID TTY          TIME CMD
+1473042 ?        00:00:01 systemd
+1473045 ?        00:00:00 (sd-pam)
+1473056 ?        00:00:00 sshd
+1473069 pts/65   00:00:00 bash
+1575250 ?        00:00:00 sshd
+1575253 pts/99   00:00:00 bash
+1578777 pts/99   00:00:00 vim
+1583963 pts/65   00:00:00 ps
+
+------------
+4. Open two terminals and login to the IBM VM.
+a. In the first terminal execute: vi file.txt Do not quit or close the vi prompt screen at this moment and keep it open.
+b. In the second terminal use the same command you used in Q3 and paste the output of it below. What did you notice? What is the Process ID for the vim?
+
+    PID TTY          TIME CMD
+1473042 ?        00:00:01 systemd
+1473045 ?        00:00:00 (sd-pam)
+1473056 ?        00:00:00 sshd
+1473069 pts/65   00:00:00 bash
+1575250 ?        00:00:00 sshd
+1575253 pts/99   00:00:00 bash
+1578777 pts/99   00:00:00 vim
+1584264 pts/65   00:00:00 vim
+1584470 ?        00:00:00 sshd
+1584473 pts/76   00:00:00 bash
+1584733 pts/76   00:00:00 ps
+
+There are new processes. 1584264
+
+c. Now go back to the first terminal and quit the vi using: q! option. 
+d. In the second terminal use the same command you used in Q3 and paste the output of it below. what did you notice? What changed and why?
+
+    PID TTY          TIME CMD
+1473042 ?        00:00:01 systemd
+1473045 ?        00:00:00 (sd-pam)
+1473056 ?        00:00:00 sshd
+1473069 pts/65   00:00:00 bash
+1575250 ?        00:00:00 sshd
+1575253 pts/99   00:00:00 bash
+1578777 pts/99   00:00:00 vim
+1584470 ?        00:00:00 sshd
+1584473 pts/76   00:00:00 bash
+1584997 pts/76   00:00:00 ps
+
+Noticed: 1584264 pts/65   00:00:00 vim is gone. 
+Vi editor was closed, therefore the process was terminated.
+
+------------
+5. What is the init process in Linux ? Find the process id for the init process. Show the command you used to do this. ( Note: The init process is also called systemd in the flavor we use on IBM VM)
+
+root           1  0.3  0.0 178560 18304 ?        Ss   Oct05  34:27 /usr/lib/systemd/systemd --switched-root --system --deserialize 17
+
+ps aux | sort -k2,2n | head -2
+
+------------
+6. Explain the command in not more than 4 sentences:  ps aux
+
+Prints processes: (a) list all users processes, (u) list all user's processes, (x) list processes wo controlling terminal.

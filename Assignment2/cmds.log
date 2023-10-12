@@ -1,0 +1,19 @@
+1.   
+   14  find /etc -type f > one.txt 2> two.txt
+   15  cat one.txt
+   16  cat two.txt
+2.   
+   20  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+   23  cut -d',' -f20,21 Global\ YouTube\ Statistics.csv > dates.txt
+   28  sort -t',' -k20,20n -k21,21M dates.txt > sortedDates.txt
+   34  uniq -c sortedDates.txt | sort -k1,1n | tail -3 > topDates.txt
+   35  cat topDates.txt 
+3.   
+   36  ps -u $USER
+4.
+   37  vi file.txt
+  #two ps-u $USER commands in the other teminal 
+5. 
+   43  ps aux | sort -k2,2n | head -2
+f. 
+   48  history > cmds.log
