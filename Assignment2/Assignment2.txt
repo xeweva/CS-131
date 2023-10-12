@@ -93,4 +93,4 @@ ps aux | sort -k2,2n | head -2
 ------------
 6. Explain the command in not more than 4 sentences:  ps aux
 
-Prints processes: (a) list all users processes, (u) list all user's processes, (x) list processes wo controlling terminal.
+Prints processes: (a) list all users processes, (u) user friendly output format, (x) list processes wo controlling terminal.
