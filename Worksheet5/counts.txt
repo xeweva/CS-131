@@ -1,0 +1,15 @@
+United States/Comedy.txt has 22 entries.
+United States/Education.txt has 17 entries.
+United States/Entertainment.txt has 68 entries.
+United States/Film & Animation.txt has 12 entries.
+United States/Gaming.txt has 26 entries.
+United States/Howto & Style.txt has 12 entries.
+United States/Music.txt has 73 entries.
+United States/nan.txt has 22 entries.
+United States/News & Politics.txt has 5 entries.
+United States/Nonprofits & Activism.txt has 1 entries.
+United States/People & Blogs.txt has 38 entries.
+United States/Pets & Animals.txt has 2 entries.
+United States/Science & Technology.txt has 6 entries.
+United States/Shows.txt has 4 entries.
+United States/Sports.txt has 5 entries.

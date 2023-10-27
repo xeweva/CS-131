@@ -1,0 +1,15 @@
+  961  mkdir Worksheet5
+  962  cd Worksheet5
+  964  mkdir United\ States
+ 
+  966  vi script.sh
+  967  chmod u+x script.sh 
+
+  972  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+
+ 1020  ./script.sh 
+
+ 1022  mv counts.txt ws5.txt
+ 1023  vi ws5.txt
+
+ 1028  history > cmds.log
