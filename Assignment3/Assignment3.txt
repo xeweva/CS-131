@@ -1,0 +1,218 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q1.
+Understand and understand what the "last" command does. Google or look it up in man page and execute on your terminal.
+I have used the same command and put the output in the file last.fake that you will download using wget command above. Filename is : last.fake
+To filter the information we need from the last.fake file, we will narrow it down to only include users with the 'f23' string, as we are interested in the data of individuals in our class.
+Directions: You should use awk,sed OR just grep and a ridrection operator to get this done. Move all lines that contain 'f23' to a new file called lastf23.fake
+
+Give commands and Output of :
+1. The number of lines in last.fake before filtering
+wc -l last.fake
+2162
+
+2. The command you used to make the file such that only lines that have "f23" are in the "lastf23.fake" file. (Similar to how you extracted US data from YoutubeDataset)
+grep -E "*f23" last.fake > lastf23.fake
+
+3. The number of lines in lastf23.fake after you filtered everything that does not have "f23"
+wc -l lastf23.fake
+239
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We will use the lastf23.fake file that you created in Step 1 for all the tasks ahead.
+
+Find all the usernames that logged in on a Sunday from the lastf23.fake file.
+Give only the distinct users.
+Directions :
+Use Grep to find users logged in on Sunday.
+Use Awk to access the column to get only the user names
+Use uniq and sort commands to get distinct users
+Use Begin and End to print the message as show in the output below
+
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+The list of people who worked on Sunday are:
+Tigressf23
+Pof23
+Shifu23
+Kudos to these people for putting in the work
+
+
+
+Script:
+#!/bin/bash
+
+echo The list of people who worked on Sunday are:
+grep -E "Sun " data/lastf23.fake | awk '{print $1}' | sort | uniq
+echo Kudos to these people for putting in the work
+
+
+
+Output:
+The list of people who worked on Sunday are:
+jewonf23
+saniaf23
+tienf23
+Kudos to these people for putting in the work
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Find all the night owls from the lastf23.fake file.
+Use the apporpriate file to find the users who logged in after 11PM ( inclusing 11PM, use >= 11PM)
+Again, give a list of distinct users.
+Directions: Use awk, sort and uniq!
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+Night Owls List:
+Tigressf23
+Pof23
+Oogway23
+Night Owls are dope. Please ensure you get enough sleep though.
+
+
+
+Script:
+#!/bin/bash
+
+echo "Night Owls List:"
+
+awk '{
+  if (NF == 10) time=$7; 
+  else time=$6;
+  split(time, arr, ":"); 
+  hour = arr[1] + 0;
+  if (hour >= 23 || hour <= 4 ) print $1;
+}' data/lastf23.fake  | sort | uniq
+
+echo "Night Owls are dope. Please ensure you get enough sleep though."
+
+
+
+Output:
+Night Owls List:
+aaronf23
+anasf23
+divijf23
+hamzaf23
+hof23
+jamesf23
+junf23
+kobef23
+maximf23
+saniaf23
+thif23
+tienf23
+Night Owls are dope. Please ensure you get enough sleep though.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 4
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Find all the Early Birds from the lastf23.fake file.
+Use the apporpriate file to find the users who logged in before 9AM ( including 9AM, use <= 9AM)
+Again, give a list of distinct users.
+Directions: Use awk, sort and uniq!
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+Early Birds List:
+Tigressf23
+Pof23
+Oogway23
+Early Birds are dope. Please ensure you get enough sleep though.
+
+
+
+Script:
+#!/bin/bash
+
+echo "Early Birds List:"
+
+awk '{
+  if (NF == 10) time=$7; 
+  else time=$6;
+  split(time, arr, ":"); 
+  hour = arr[1] + 0;
+  if (hour > 4 && hour <= 9) print $1;
+}' data/lastf23.fake  | sort | uniq
+echo "Early Birds are dope. Please ensure you get enough sleep though."
+
+
+Output:
+Early Birds List:
+hamzaf23
+hof23
+saniaf23
+thif23
+tienf23
+Early Birds are dope. Please ensure you get enough sleep though.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 5
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Display the users having a username that starts with "t"
+Directions : use awk and regex that we used in Class activity to find Tomatoes!
+Give the commands and output for the same.
+
+
+
+awk '/^t/{print $1}' ./data/lastf23.fake | sort | uniq 
+thif23
+tienf23
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 6
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Use awk on the passwd.fake file to find all users that have usernames starting with 'a' and have UID divisble by 2.
+(Notice that you have to use && as I only want the list of users who qualify both conditions)
+Give the commands and output for the same.
+
+
+
+
+$ awk -F':' '/^a/ && $3 % 2 == 0 { print $1 }' ./data/passwd.fake
+angie23fa
+areebah23fa
+apple23fa
+ajay23fa
+alan23fa
+amreenf23
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 7
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Use sed on passwd.fake to Display all the distinct lines left in passwd.fake after deleting all letter and digits and spaces.
+Directions : You would need just the sed command and regex to do this. Use sort -u to only display the distinct lines that remain.
+Give the commands and output for the same.
+
+
+$ sed 's/[a-zA-Z0-9 ]//g' ./data/passwd.fake | sort -u
+-::::-:/://
+-:::::///-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

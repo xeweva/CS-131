@@ -1,0 +1,154 @@
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/dev/null:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+clevis:x:997:992:Clevis Decryption Framework unprivileged user:/var/cache/clevis:/sbin/nologin
+unbound:x:996:991:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+libstoragemgmt:x:995:990:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+setroubleshoot:x:994:989::/var/lib/setroubleshoot:/sbin/nologin
+cockpit-ws:x:993:988:User for cockpit web service:/nonexisting:/sbin/nologin
+cockpit-wsinstance:x:992:987:User for cockpit-ws instances:/nonexisting:/sbin/nologin
+sssd:x:991:986:User for sssd:/:/sbin/nologin
+chrony:x:990:985::/var/lib/chrony:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+rhel:x:1000:1000:rhel Cloud User:/home/rhel:/bin/bash
+genya:x:1001:1001::/mnt/scratch/genya:/bin/bash
+ritik23fa:x:1002:1002::/mnt/scratch/ritik23fa:/bin/bash
+samuel23fa:x:1003:1003::/mnt/scratch/samuel23fa:/bin/bash
+angie23fa:x:1004:1004::/mnt/scratch/angie23fa:/bin/bash
+jeffrey23fa:x:1005:1005::/mnt/scratch/jeffrey23fa:/bin/bash
+kevin23fa:x:1006:1006::/mnt/scratch/kevin23fa:/bin/bash
+steven23fa:x:1007:1007::/mnt/scratch/steven23fa:/bin/bash
+sokuntheary23fa:x:1008:1008::/mnt/scratch/sokuntheary23fa:/bin/bash
+leonardo23fa:x:1009:1009::/mnt/scratch/leonardo23fa:/bin/bash
+hishaam23fa:x:1010:1010::/mnt/scratch/hishaam23fa:/bin/bash
+patricio23fa:x:1011:1011::/mnt/scratch/patricio23fa:/bin/bash
+peter:x:1012:1012::/mnt/scratch/peter:/bin/bash
+lex23fa:x:1013:1013::/mnt/scratch/lex23fa:/bin/bash
+fnu23fa:x:1014:1014::/mnt/scratch/fnu23fa:/bin/bash
+dylan23fa:x:1015:1015::/mnt/scratch/dylan23fa:/bin/bash
+areebah23fa:x:1016:1016::/mnt/scratch/areebah23fa:/bin/bash
+munkh-erdene23fa:x:1017:1017::/mnt/scratch/munkh-erdene23fa:/bin/bash
+apple23fa:x:1018:1018::/mnt/scratch/apple23fa:/bin/bash
+brandon23fa:x:1019:1019::/mnt/scratch/brandon23fa:/bin/bash
+tak23fa:x:1020:1020::/mnt/scratch/tak23fa:/bin/bash
+abdullah23fa:x:1021:1021::/mnt/scratch/abdullah23fa:/bin/bash
+yar23fa:x:1022:1022::/mnt/scratch/yar23fa:/bin/bash
+manh23fa:x:1023:1023::/mnt/scratch/manh23fa:/bin/bash
+nathan23fa:x:1024:1024::/mnt/scratch/nathan23fa:/bin/bash
+ashkan23fa:x:1025:1025::/mnt/scratch/ashkan23fa:/bin/bash
+joshua23fa:x:1026:1026::/mnt/scratch/joshua23fa:/bin/bash
+hruday23fa:x:1027:1027::/mnt/scratch/hruday23fa:/bin/bash
+manmohanbabu23fa:x:1028:1028::/mnt/scratch/manmohanbabu23fa:/bin/bash
+matthew23fa:x:1029:1029::/mnt/scratch/matthew23fa:/bin/bash
+ajay23fa:x:1030:1030::/mnt/scratch/ajay23fa:/bin/bash
+moe23fa:x:1031:1031::/mnt/scratch/moe23fa:/bin/bash
+alan23fa:x:1032:1032::/mnt/scratch/alan23fa:/bin/bash
+tommy23fa:x:1033:1033::/mnt/scratch/tommy23fa:/bin/bash
+yelin23fa:x:1034:1034::/mnt/scratch/yelin23fa:/bin/bash
+ruxin23fa:x:1035:1035::/mnt/scratch/ruxin23fa:/bin/bash
+erica23fa:x:1036:1036::/mnt/scratch/erica23fa:/bin/bash
+junwen23fa:x:1037:1037::/mnt/scratch/junwen23fa:/bin/bash
+fnus23fa:x:1038:1038::/mnt/scratch/fnus23fa:/bin/bash
+billandreopoulos:x:1076:1076::/mnt/scratch/FA23_online/billandreopoulos:/bin/bash
+assafmuhammad:x:1077:1077::/mnt/scratch/FA23_online/assafmuhammad:/bin/bash
+carterelijah:x:1078:1078::/mnt/scratch/FA23_online/carterelijah:/bin/bash
+chenkyle:x:1079:1079::/mnt/scratch/FA23_online/chenkyle:/bin/bash
+chopraaarohi:x:1080:1080::/mnt/scratch/FA23_online/chopraaarohi:/bin/bash
+daifrank:x:1081:1081::/mnt/scratch/FA23_online/daifrank:/bin/bash
+digheameya:x:1082:1082::/mnt/scratch/FA23_online/digheameya:/bin/bash
+dittojulien:x:1083:1083::/mnt/scratch/FA23_online/dittojulien:/bin/bash
+erinmwingbovoosayame:x:1084:1084::/mnt/scratch/FA23_online/erinmwingbovoosayame:/bin/bash
+eschjeremy:x:1085:1085::/mnt/scratch/FA23_online/eschjeremy:/bin/bash
+headleyashton:x:1086:1086::/mnt/scratch/FA23_online/headleyashton:/bin/bash
+huangangela:x:1087:1087::/mnt/scratch/FA23_online/huangangela:/bin/bash
+huynhbill:x:1088:1088::/mnt/scratch/FA23_online/huynhbill:/bin/bash
+jianjames:x:1089:1089::/mnt/scratch/FA23_online/jianjames:/bin/bash
+krishnagokul:x:1090:1090::/mnt/scratch/FA23_online/krishnagokul:/bin/bash
+linraymond:x:1091:1091::/mnt/scratch/FA23_online/linraymond:/bin/bash
+luualan:x:1092:1092::/mnt/scratch/FA23_online/luualan:/bin/bash
+malexin:x:1093:1093::/mnt/scratch/FA23_online/malexin:/bin/bash
+mengkaiming:x:1094:1094::/mnt/scratch/FA23_online/mengkaiming:/bin/bash
+nguyenvictoria:x:1095:1095::/mnt/scratch/FA23_online/nguyenvictoria:/bin/bash
+niansean:x:1096:1096::/mnt/scratch/FA23_online/niansean:/bin/bash
+phanstephanie:x:1097:1097::/mnt/scratch/FA23_online/phanstephanie:/bin/bash
+qianbrian:x:1098:1098::/mnt/scratch/FA23_online/qianbrian:/bin/bash
+ramirezlanderosgabriel:x:1099:1099::/mnt/scratch/FA23_online/ramirezlanderosgabriel:/bin/bash
+rokkamaravind:x:1100:1100::/mnt/scratch/FA23_online/rokkamaravind:/bin/bash
+sharmaakshit:x:1101:1101::/mnt/scratch/FA23_online/sharmaakshit:/bin/bash
+shpilbergroman:x:1102:1102::/mnt/scratch/FA23_online/shpilbergroman:/bin/bash
+syedtalia:x:1103:1103::/mnt/scratch/FA23_online/syedtalia:/bin/bash
+taigario:x:1104:1104::/mnt/scratch/FA23_online/taigario:/bin/bash
+tangnicholas:x:1105:1105::/mnt/scratch/FA23_online/tangnicholas:/bin/bash
+tawdegargi:x:1106:1106::/mnt/scratch/FA23_online/tawdegargi:/bin/bash
+trinhviana:x:1107:1107::/mnt/scratch/FA23_online/trinhviana:/bin/bash
+vlasiukandrii:x:1108:1108::/mnt/scratch/FA23_online/vlasiukandrii:/bin/bash
+yacoubrimon:x:1109:1109::/mnt/scratch/FA23_online/yacoubrimon:/bin/bash
+yeenathan:x:1110:1110::/mnt/scratch/FA23_online/yeenathan:/bin/bash
+zazakhaled:x:1111:1111::/mnt/scratch/FA23_online/zazakhaled:/bin/bash
+nguyenmaianhdo:x:1112:1112::/mnt/scratch/FA23_online/nguyenmaianhdo:/bin/bash
+abdulwahabf23:x:1113:1113::/mnt/scratch/FA23_CS131_Ashish/abdulwahabf23:/bin/bash
+junf23:x:1114:1114::/mnt/scratch/FA23_CS131_Ashish/junf23:/bin/bash
+saniaf23:x:1115:1115::/mnt/scratch/FA23_CS131_Ashish/saniaf23:/bin/bash
+haroldf23:x:1116:1116::/mnt/scratch/FA23_CS131_Ashish/haroldf23:/bin/bash
+brendanf23:x:1117:1117::/mnt/scratch/FA23_CS131_Ashish/brendanf23:/bin/bash
+maximf23:x:1118:1118::/mnt/scratch/FA23_CS131_Ashish/maximf23:/bin/bash
+nicholasf23:x:1119:1119::/mnt/scratch/FA23_CS131_Ashish/nicholasf23:/bin/bash
+samuelf23:x:1120:1120::/mnt/scratch/FA23_CS131_Ashish/samuelf23:/bin/bash
+ashishf23:x:1121:1121::/mnt/scratch/FA23_CS131_Ashish/ashishf23:/bin/bash
+benjaminf23:x:1122:1122::/mnt/scratch/FA23_CS131_Ashish/benjaminf23:/bin/bash
+jamesf23:x:1123:1123::/mnt/scratch/FA23_CS131_Ashish/jamesf23:/bin/bash
+gabrielf23:x:1124:1124::/mnt/scratch/FA23_CS131_Ashish/gabrielf23:/bin/bash
+tienf23:x:1125:1125::/mnt/scratch/FA23_CS131_Ashish/tienf23:/bin/bash
+jonathanf23:x:1126:1126::/mnt/scratch/FA23_CS131_Ashish/jonathanf23:/bin/bash
+brandonf23:x:1127:1127::/mnt/scratch/FA23_CS131_Ashish/brandonf23:/bin/bash
+nathanf23:x:1128:1128::/mnt/scratch/FA23_CS131_Ashish/nathanf23:/bin/bash
+thif23:x:1129:1129::/mnt/scratch/FA23_CS131_Ashish/thif23:/bin/bash
+bhavdeepf23:x:1130:1130::/mnt/scratch/FA23_CS131_Ashish/bhavdeepf23:/bin/bash
+aaronf23:x:1131:1131::/mnt/scratch/FA23_CS131_Ashish/aaronf23:/bin/bash
+hof23:x:1132:1132::/mnt/scratch/FA23_CS131_Ashish/hof23:/bin/bash
+rogers23fa:x:1133:1133::/mnt/scratch/rogers23fa:/bin/bash
+rupanagudi23fa:x:1134:1134::/mnt/scratch/rupanagudi23fa:/bin/bash
+vo23fa:x:1135:1135::/mnt/scratch/vo23fa:/bin/bash
+wang23fa:x:1136:1136::/mnt/scratch/wang23fa:/bin/bash
+peter23fa:x:1137:1137::/mnt/scratch/peter23fa:/bin/bash
+rogeliof23:x:1138:1138::/mnt/scratch/FA23_CS131_Ashish/rogeliof23:/bin/bash
+anasf23:x:1139:1139::/mnt/scratch/FA23_CS131_Ashish/anasf23:/bin/bash
+josephf23:x:1140:1140::/mnt/scratch/FA23_CS131_Ashish/josephf23:/bin/bash
+hamzaf23:x:1141:1141::/mnt/scratch/FA23_CS131_Ashish/hamzaf23:/bin/bash
+zipengf23:x:1142:1142::/mnt/scratch/FA23_CS131_Ashish/zipengf23:/bin/bash
+rikkif23:x:1143:1143::/mnt/scratch/FA23_CS131_Ashish/rikkif23:/bin/bash
+kobef23:x:1144:1144::/mnt/scratch/FA23_CS131_Ashish/kobef23:/bin/bash
+jewonf23:x:1145:1145::/mnt/scratch/FA23_CS131_Ashish/jewonf23:/bin/bash
+kidaneeden:x:1146:1146::/mnt/scratch/FA23_online/kidaneeden:/bin/bash
+jimenezrafael:x:1147:1147::/mnt/scratch/FA23_online/jimenezrafael:/bin/bash
+bhogalguneet:x:1148:1148::/mnt/scratch/FA23_online/bhogalguneet:/bin/bash
+shervanf23:x:1149:1149::/mnt/scratch/FA23_CS131_Ashish/shervanf23:/bin/bash
+amreenf23:x:1150:1150::/mnt/scratch/FA23_CS131_Ashish/amreenf23:/bin/bash
+divijf23:x:1151:1151::/mnt/scratch/FA23_CS131_Ashish/divijf23:/bin/bash
+rahulf23:x:1152:1152::/mnt/scratch/FA23_CS131_Ashish/rahulf23:/bin/bash
+stevenf23:x:1153:1153::/mnt/scratch/FA23_CS131_Ashish/stevenf23:/bin/bash
+ishaf23:x:1154:1154::/mnt/scratch/FA23_CS131_Ashish/ishaf23:/bin/bash
+jaspreet23fa:x:1155:1155::/mnt/scratch/jaspreet23fa:/bin/bash
+ledavid:x:1156:1156::/mnt/scratch/FA23_online/ledavid:/bin/bash
+ahmedamreen:x:1157:1157::/mnt/scratch/FA23_online/ahmedamreen:/bin/bash
+rabiaisha:x:1158:1158::/mnt/scratch/FA23_online/rabiaisha:/bin/bash
+nguyentramy:x:1159:1159::/mnt/scratch/FA23_online/nguyentramy:/bin/bash
+rajeshaarushi:x:1160:1160::/mnt/scratch/FA23_online/rajeshaarushi:/bin/bash
+reyesazusena:x:1161:1161::/mnt/scratch/FA23_online/reyesazusena:/bin/bash
+coffee:x:1162:1162::/home/coffee:/bin/bash
