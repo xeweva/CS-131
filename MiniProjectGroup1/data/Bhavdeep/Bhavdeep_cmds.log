@@ -1,0 +1,5 @@
+    touch parental_education_scores.awk
+    vim parental_education_scores.awk 
+    chmod +x parental_education_scores.awk 
+    wget https://raw.githubusercontent.com/BhavdeepR/cs131/main/StudentsPerformance.csv
+    awk -f parental_education_scores.awk StudentsPerformance.csv >> parental_education_scores.csv
