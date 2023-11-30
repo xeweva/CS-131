@@ -1,0 +1,31 @@
+sed 's/"//g' StudentsPerformance.csv.xls > StudentsPerformance.csv  
+
+awk -F',' '{print " $6 "," $7 "}' StudentPerformance.csv >> math_reading_scores.csv
+
+
+awk -F',' '{print " $6 "," $8 "}' StudentPerformance.csv >> math_writing_scores.csv
+
+
+awk -F',' '{print " $7 "," $8 "}' StudentPerformance.csv >> reading_writing_scores.csv
+
+
+awk -F',' '{print " $3 ", " $6 ", " $7 "," $8 "}' StudentsPerformance.csv > parent_education_correlation.csv
+
+awk -F',' 'NR>1 {if (NR==2) {max_math=$6; min_math=$6; sum_math=$6;}
+                      else {if ($6 > max_math) max_math=$6; if ($6 < min_math) min_math=$6; sum_math+=$6;}}
+           END {print "Math - Max:", max_math, "Min:", min_math, "Average:", sum_math/(NR-1);}' StudentPerformance.csv >> counts.txt
+
+awk -F',' 'NR>1 {if (NR==2) {max_reading=$7; min_reading=$7; sum_reading=$7;}
+                      else {if ($7 > max_reading) max_reading=$7; if ($7 < min_reading) min_reading=$7; sum_reading+=$7;}}
+           END {print "Reading - Max:", max_reading, "Min:", min_reading, "Average:", sum_reading/(NR-1);}' StudentPerformance.csv >> counts.txt
+
+
+
+
+awk -F',' 'NR>1 {if (NR==2) {max_writing=$8; min_writing=$8; sum_writing=$8;}
+                      else {if ($8 > max_writing) max_writing=$8; if ($8 < min_writing) min_writing=$8; sum_writing+=$8;}}
+           END {print "Writing - Max:", max_writing, "Min:", min_writing, "Average:", sum_writing/(NR-1);}' StudentPerformance.csv >> counts.txt
+
+wc -l < StudentPerformance.csv >> counts.txt
+
+head -n 1 StudentPerformance.csv | awk -F',' '{print NF}' >> counts.txt

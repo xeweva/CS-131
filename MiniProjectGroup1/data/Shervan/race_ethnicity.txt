@@ -1,0 +1,6 @@
+group A 89
+group B 190
+race/ethnicity 1
+group C 319
+group D 262
+group E 140

@@ -1,0 +1,14 @@
+Male: 482 Female: 518
+
+Math - Max: 100 Min: 0 Average: 66.089
+Reading - Max: 100 Min: 17 Average: 69.169
+Writing - Max: 100 Min: 10 Average: 68.054
+
+Number of Columns in Data Set: 8
+Number of Rows in Data Set: 1001
+
+group A: 89
+group B: 190
+group C: 319
+group D: 262
+group E: 140
