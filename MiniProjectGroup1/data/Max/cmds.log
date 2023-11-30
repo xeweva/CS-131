@@ -1,0 +1,6 @@
+$awk -F, '{sum = $6 + $7 + $8; print $0","sum}' StudentsPerformance.csv > StudentsPerformanceWTotal.csv 
+$awk -F, '{print $4, $9}' StudentsPerformanceWTotal.csv > lunch_totalScore.csv
+$awk -F, '{print $5, $9}' StudentsPerformanceWTotal.csv > testPrep_totalScore.csv
+$awk -F, '{    sum[$1] += $2;     count[$1]++} END {    for (category in sum) {        printf "%s: %.2f\n", category, sum[category] / count[category]    }}' lunch_totalScore.csv > lunchMeans.txt
+$awk -F, '{    sum[$1] += $2;     count[$1]++} END {    for (category in sum) {        printf "%s: %.2f\n", category, sum[category] / count[category]    }}' testPrep_totalScore.csv > testPrepMeans.txt
+
